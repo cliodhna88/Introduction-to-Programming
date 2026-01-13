@@ -1,0 +1,3 @@
+C = 8, 10
+total = sum(C)
+print (f"The sum is {total}")
