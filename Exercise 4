@@ -1,0 +1,59 @@
+user_input = input ("What is the Capital of France?")
+if user_input.lower() == 'paris':
+    print ("!CORRECT!")
+else:
+    print ("!WRONG!")
+
+user_input = input ("What is the Capital of Germany?")
+if user_input.lower() == 'berlin':
+    print ("!CORRECT!")
+else:
+    print ("!WRONG!")
+
+user_input = input ("What is the Capital of Spain?")
+if user_input.lower() == 'madrid':
+    print ("!CORRECT!")
+else:
+    print ("!WRONG!")
+
+user_input = input ("What is the Capital of Italy?")
+if user_input.lower() == 'rome':
+    print ("!CORRECT!")
+else:
+    print ("!WRONG!")
+
+user_input = input ("What is the Capital of UK?")
+if user_input.lower() == 'london':
+    print ("!CORRECT!")
+else:
+    print ("!WRONG!")
+
+user_input = input ("What is the Capital of Greece?")
+if user_input.lower() == 'athens':
+    print ("!CORRECT!")
+else:
+    print ("!WRONG!")
+
+user_input = input ("What is the Capital of Austria?")
+if user_input.lower() == 'vienna':
+    print ("!CORRECT!")
+else:
+    print ("!WRONG!")
+
+user_input = input ("What is the Capital of Portugal?")
+if user_input.lower() == 'lisbon':
+    print ("!CORRECT!")
+else:
+    print ("!WRONG!")
+
+user_input = input ("What is the Capital of Sweden?")
+if user_input.lower() == 'stockholm':
+    print ("!CORRECT!")
+else:
+    print ("!WRONG!")
+
+user_input = input ("What is the Capital of Poland?")
+if user_input.lower() == 'warsaw':
+    print ("!CORRECT!")
+else:
+    print ("!WRONG!")
