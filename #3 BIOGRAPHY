@@ -1,0 +1,6 @@
+person_info = {
+    "name": "John Doe", 
+    "hometown": "New York",
+    "age": 30,
+} 
+print(f"My name is {person_info['name']}, I am from {person_info['hometown']} and I am {person_info['age']} years old.")    
