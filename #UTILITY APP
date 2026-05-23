@@ -1,0 +1,70 @@
+def main():
+    menu = {
+        1: {"Item": "Coke", "Price": 50},
+        2: {"Item": "Chips", "Price": 50},
+        3: {"Item": "Water", "Price": 50},
+    }
+
+    total_inserted = 0
+
+    print("------- Vending Machine Menu -------")
+    for item, data in menu.items():
+        print(f"Item ID: {item} | Product: {data['Item']} | Price: AED{data['Price']/100:.2f}")
+    print("Type 'exit' anytime to quit.")
+    print("------------------------------------")
+
+    while True:
+        choice = input("\nEnter the item ID for the item you want to buy: ")
+
+        if choice.lower() == "exit":
+            print(f"Refunding AED{total_inserted/100:.2f}. Goodbye.")
+            break
+
+        try:
+            choice = int(choice)
+        except ValueError:
+            print("Invalid input. Please enter a valid item ID or 'exit'.")
+            continue
+
+        if choice in menu:
+            item = menu[choice]
+            price = item["Price"]
+
+            print(f"You selected {item['Item']}. Price: AED{price/100:.2f}")
+
+            total = 0
+
+            while total < price:
+                print(f"Amount due: AED{(price - total)/100:.2f}")
+
+                coin = input("Insert a coin (in FILS, e.g., 25, 50, 100) or type 'exit': ")
+
+                if coin.lower() == "exit":
+                    print(f"Refunding AED{total/100:.2f}. Transaction cancelled.")
+                    return
+
+                try:
+                    coin = int(coin)
+
+                    if coin > 0:
+                        total += coin
+                        total_inserted += coin
+                    else:
+                        print("Invalid amount. Please insert a correct value.")
+
+                except ValueError:
+                    print("Invalid input. Please enter a valid coin amount.")
+
+            change = total - price
+
+            print(f"Thank you! Here is your {item['Item']}.")
+
+            if change > 0:
+                print(f"Please take your change: AED{change/100:.2f}")
+
+        else:
+            print("Invalid item ID. Please try again.")
+        
+        break
+
+main()
